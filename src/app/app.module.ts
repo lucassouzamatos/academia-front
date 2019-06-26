@@ -8,8 +8,20 @@ import { SidebarModule } from 'primeng/sidebar';
 
 import { AppComponent } from './app.component';
 
+import { UsuariosModule } from './usuarios/usuarios.module';
+import { UsuariosPesquisaComponent } from './usuarios/usuarios-pesquisa/usuarios-pesquisa.component';
+import { UsuariosCadastroComponent } from './usuarios/usuarios-cadastro/usuarios-cadastro.component';
+
+import { ExerciciosModule } from './exercicios/exercicios.module';
+import { ExerciciosPesquisaComponent } from './exercicios/exercicios-pesquisa/exercicios-pesquisa.component';
+import { ExerciciosCadastroComponent } from './exercicios/exercicios-cadastro/exercicios-cadastro.component';
+
 const routes: Routes = [
-  { path: '', redirectTo: 'usuarios', pathMatch:'full' }
+  { path: '', redirectTo: 'usuarios', pathMatch:'full' },
+  { path: 'usuarios', component: UsuariosPesquisaComponent },
+  { path: 'usuarios/novo', component: UsuariosCadastroComponent },
+  { path: 'exercicios', component: ExerciciosPesquisaComponent },
+  { path: 'exercicios/novo', component: ExerciciosCadastroComponent }
 ]
 
 @NgModule({
@@ -18,10 +30,14 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
     ButtonModule,
     SidebarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
+    UsuariosModule,
+    ExerciciosModule,
+
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

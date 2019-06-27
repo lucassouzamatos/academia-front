@@ -22,8 +22,8 @@ export class UsuariosService {
     return this.service.delete<any>(`${this.usuariosUrl}/${id}`).toPromise();
   }
 
-  adicionar(cat: Usuario) :Promise<any> {
-    return this.service.post(this.usuariosUrl, cat).toPromise();
+  adicionar(usuario: Usuario) :Promise<any> {
+    return this.service.post(this.usuariosUrl, usuario).toPromise();
   }
 
   alterar(usuario: Usuario): Promise<any> {

@@ -24,11 +24,11 @@ export class UsuariosCadastroComponent implements OnInit {
   ngOnInit() {
     const { id } = this.rota.snapshot.params;
     if (id) {
-      this.carregarusuario(id);
+      this.carregarUsuario(id);
     }
   }
 
-  async carregarusuario(id:number){
+  async carregarUsuario(id:number){
     this.usuario = await this.usuariosService.buscarPorCodigo(id);
   }
 

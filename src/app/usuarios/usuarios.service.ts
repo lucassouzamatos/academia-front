@@ -6,7 +6,7 @@ import { Usuario } from './model';
   providedIn: 'root'
 })
 export class UsuariosService {
-  usuariosUrl = 'http://localhost:8080/usuarios';
+  usuariosUrl = 'http://localhost:8080/alunos';
 
   constructor(private service: HttpClient) { }
 
@@ -28,7 +28,7 @@ export class UsuariosService {
 
   alterar(usuario: Usuario): Promise<any> {
     return this.service.put(this.usuariosUrl + '/' + usuario.id, usuario)
-    .toPromise();
+      .toPromise();
   }
 
   buscarPorCodigo(codigo: number): Promise<Usuario> {

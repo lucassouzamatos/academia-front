@@ -20,20 +20,20 @@
 
             <div class="ui-g-12 ui-md-9 ui-fluid">
               <label>Sexo</label>
-              <input pInputText type="text" name="nome"
+              <input pInputText type="text" name="sexo"
                 [(ngModel)]="usuario.sexo"
-                #nome="ngModel" required minlength="3">
+                #sexo="ngModel" required>
 
-                <div *ngIf="nome.hasError('required') && nome.touched">Informe o sexo</div>
+                <div *ngIf="sexo.hasError('required') && sexo.touched">Informe o sexo</div>
             </div>
 
             <div class="ui-g-12 ui-md-9 ui-fluid">
               <label>Idade</label>
-              <input pInputText type="text" name="nome"
+              <input pInputText type="text" name="idade"
                 [(ngModel)]="usuario.idade"
-                #nome="ngModel" required minlength="3">
+                #idade="ngModel" required>
 
-                <div *ngIf="nome.hasError('required') && nome.touched">Informe a idade</div>
+                <div *ngIf="idade.hasError('required') && idade.touched">Informe a idade</div>
             </div>
 
             <div class="ui-g-12">

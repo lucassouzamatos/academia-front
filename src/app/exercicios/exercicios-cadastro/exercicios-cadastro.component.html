@@ -22,7 +22,7 @@
               <label>Repetições</label>
               <input pInputText type="text" name="repeticoes"
                 [(ngModel)]="exercicio.repeticoes"
-                #nome="ngModel" required>
+                #repeticoes="ngModel" required>
 
                 <div *ngIf="repeticoes.hasError('required') && repeticoes.touched">Informe o sexo</div>
             </div>
@@ -31,7 +31,7 @@
               <label>Carga</label>
               <input pInputText type="text" name="carga"
                 [(ngModel)]="exercicio.carga"
-                #nome="ngModel" required>
+                #carga="ngModel" required>
 
                 <div *ngIf="carga.hasError('required') && carga.touched">Informe a idade</div>
             </div>

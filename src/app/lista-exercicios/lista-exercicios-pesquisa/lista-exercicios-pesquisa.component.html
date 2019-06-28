@@ -4,7 +4,7 @@
   <form autocomplete="off" (ngSubmit)="pesquisar()">
     <div class="ui-g">
       <div class="ui-g-12">
-        <h1>Exercícios</h1>
+        <h1>Listas de exercícios</h1>
       </div>
 
       <div class="ui-g-12 ui-fluid">
@@ -26,19 +26,19 @@
       </p-confirmDialog>
 
       <div class="ui-g-12">
-        <p-table [value]="exercicios" [responsive]="true" [paginator]="true" [rows]="10">
+        <p-table [value]="listas" [responsive]="true" [paginator]="true" [rows]="10">
           <ng-template pTemplate="header">
             <tr>
               <th class="col-id-header">Id</th>
-              <th>Nome</th>
+              <th>Usuário</th>
               <th></th>
             </tr>
           </ng-template>
 
-          <ng-template pTemplate="body" let-exercicio>
+          <ng-template pTemplate="body" let-lista>
             <tr>
-              <td class="col-id">{{ exercicio.id }}</td>
-              <td>{{ exercicio.nome }}</td>
+              <td class="col-id">{{ lista.id }}</td>
+              <td>{{ lista.usuario.nome }}</td>
               <td>
                 <button
                   showDelay="1000"
@@ -69,6 +69,6 @@
     </div>
 
     <div class="ui-g-12">
-      <a pButton routerLink="/exercicios/novo" label="Novo exercício"></a>
+      <a pButton routerLink="/lista-exercicios/novo" label="Nova lista"></a>
     </div>
 </div>
